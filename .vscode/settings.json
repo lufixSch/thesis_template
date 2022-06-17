@@ -5,6 +5,10 @@
       "tools": ["latexmk"]
     },
     {
+      "name": "latexmk-glossary",
+      "tools": ["latexmk", "glossary", "latexmk"]
+    },
+    {
       "name": "latexmk",
       "tools": ["latexmk"]
     },
@@ -15,9 +19,18 @@
     {
       "name": "convert",
       "tools": ["latexmk-convert"]
+    },
+    {
+      "name": "glossary",
+      "tools": ["glossary"]
     }
   ],
   "latex-workshop.latex.tools": [
+    {
+      "name": "glossary",
+      "command": "makeglossaries",
+      "args": ["-d", "%OUTDIR%", "%DOCFILE%"]
+    },
     {
       "name": "latexmk",
       "command": "latexmk",
